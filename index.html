@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jq.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="game">
+        <div class="enemy enemy-1"></div>
+        <div class="enemy enemy-2"></div>
+        <div class="enemy enemy-3"></div>
+        <div class="enemy enemy-4"></div>
+    </div>
+    <div class="scores" style="display: none">
+        <div class="box">
+          <ul id="items">
+          </ul>
+            <button onclick="restart()">Restart !</button>
+        </div>
+    </div>
+    <div class="start-page">
+        <div class="box">
+            <p>Please enter your name : </p>
+            <div style="position: relative;"><input pattern=".{3,20}" type="text" id="nametxt" class="name-text">  <p class="hint">Must have 3 - 20 Characters</p></div>
+
+            <p>
+                <button onclick="start()">Start Game</button>
+            </p>
+        </div>
+    </div>
+    <div class="dead" style="display: none">
+        <div class="box">
+            <p>You Are DEAD !</p>
+            <button onclick="restart()">Restart !</button>
+        </div>
+    </div>
+    <div class="meta guns">
+        <div class="gun gun1 active">Sniper</div>
+        <div class="gun gun2">Mechine</div>
+        <div class="gun gun3">Fast</div>
+        <div class="gun gun4">Laser</div>
+    </div>
+    <div class="meta">
+        <div class="life"></div>
+        <p>Your Time <span id="time">0</span></p>
+        <div class="temp-bar"><div class="tmp"></div></div>
+    </div>
+</body>
+</html>
